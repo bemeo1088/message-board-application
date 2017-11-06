@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
-var dbPath = 'mongodb://localhost:27017/realestate';
+var dbPath = 'mongodb://localhost:27017/message';
 
 mongoose.connection.on('connected', function () {
-    console.log('mongod connected!');
+    console.log('mongodb connected!');
 });
 
 mongoose.connection.on('error', function () {
-    console.log('failed to connect to mongod');
+    console.log('failed to connect to mongodb');
 });
 
 mongoose.connect(dbPath);
