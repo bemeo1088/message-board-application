@@ -7,6 +7,7 @@
         <script src="vendors/angular.js"></script>
         <script src="vendors/angular-route.js"></script>
         <script src="scripts/client.js"></script>
+        <script src="scripts/services/message.service.js"></script>
         <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="styles/style.css">
         <meta name="description" content="">
@@ -14,16 +15,24 @@
     </head>
     <body ng-app="myApp">
         <div class="container">
-            <h1>MESSAGE BOARD APPLICATION</h1>
+            <div class="jumbotron">
+                <h1>MESSAGE BOARD APPLICATION</h1>
+            </div>
+           
                 <div class="content" ng-controller="ListingController as lc">
-                    {{4===4}}
+                   
                     <form ng-submit="lc.submitListing(lc.listing)">
-                        <input type="text" placeholder="name" ng-model="">
-                        <input type="text" placeholder="message" ng-model="">
+                        <input type="text" placeholder="name" ng-model="lc.listing.name">
+                        <input type="text" placeholder="message" ng-model="lc.listing.message">
                         <input type="submit">
-
                     </form>
+                    <div class="row">
+                        <div class="col-lg-6" ng-repeat="listing in lc.results.data">
+                            <p>USER'S NAME: {{listing.name}}</p>
+                            <p>USER'S MESSAGE: {{listing.message}}</p>
+                        </div>
 
+                    </div>
 
                 </div>
 

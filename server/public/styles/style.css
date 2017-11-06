@@ -1,0 +1,16 @@
+.jumbotron {
+    background-image: url('https://static.pexels.com/photos/270535/pexels-photo-270535.jpeg');
+    height: 100%;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+}
+
+.content {
+    margin: 0 auto;
+
+}
+.row {
+    margin: 20px;
+}

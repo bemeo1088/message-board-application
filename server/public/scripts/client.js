@@ -1,6 +1,6 @@
-var myApp = angular.module( 'myApp', ['ngRoute']);
+var myApp = angular.module( 'myApp', []);
 
-myApp.controller('ListingController', function ($http){
+myApp.controller('ListingController', function (MessageService){
     var vm = this;
     vm.listing = {
         name: '',
