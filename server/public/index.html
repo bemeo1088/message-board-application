@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MESSAGE BOARD APPLICATION</title>
+        <script src="vendors/angular.js"></script>
+        <script src="vendors/angular-route.js"></script>
+        <script src="scripts/client.js"></script>
+        <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body ng-app="myApp">
+        <div class="container">
+            <h1>MESSAGE BOARD APPLICATION</h1>
+                <div class="content" ng-controller="ListingController as lc">
+                    <form ng-submit="lc.submitListing(lc.listing)">
+                        <input type="text" placeholder="name" ng-model="">
+                        <input type="text" placeholder="message" ng-model="">
+                        <input type="submit">
+
+                    </form>
+
+
+                </div>
+
+        </div>
+    </body>
+</html>
